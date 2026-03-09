@@ -1,0 +1,47 @@
+{
+  "createdAt": "2026-03-08T21:35:05.073Z",
+  "targetHost": "api.wafermc.it",
+  "remoteDistroUrl": "https://api.wafermc.it/distribution.json",
+  "sourceDistribution": "C:\\Users\\Netsukii\\AppData\\Roaming\\WaferMC Launcher\\distribution.json",
+  "totalHostedFiles": 3,
+  "okFiles": 3,
+  "errorFiles": 0,
+  "files": [
+    {
+      "serverId": "WaferMC-1.21.11",
+      "modId": "options.txt",
+      "url": "https://api.wafermc.it/servers/WaferMC-1.21.11/files/options.txt",
+      "relPath": "servers/WaferMC-1.21.11/files/options.txt",
+      "artifactPath": "options.txt",
+      "source": "C:\\Users\\Netsukii\\AppData\\Roaming\\.WaferMC-Launcher\\instances\\WaferMC-1.21.11\\options.txt",
+      "outPath": "C:\\Users\\Netsukii\\Documents\\Visual Studio Code\\WaferMC\\WaferMC-Launcher\\server_upload_bundle_2026-03-08-21-35-05\\servers\\WaferMC-1.21.11\\files\\options.txt",
+      "chain": "options.txt",
+      "action": "copy",
+      "status": "ok"
+    },
+    {
+      "serverId": "WaferMC-1.21.11",
+      "modId": "servers.dat",
+      "url": "https://api.wafermc.it/servers/WaferMC-1.21.11/files/servers.dat",
+      "relPath": "servers/WaferMC-1.21.11/files/servers.dat",
+      "artifactPath": "servers.dat",
+      "source": "C:\\Users\\Netsukii\\AppData\\Roaming\\.WaferMC-Launcher\\instances\\WaferMC-1.21.11\\servers.dat",
+      "outPath": "C:\\Users\\Netsukii\\Documents\\Visual Studio Code\\WaferMC\\WaferMC-Launcher\\server_upload_bundle_2026-03-08-21-35-05\\servers\\WaferMC-1.21.11\\files\\servers.dat",
+      "chain": "servers.dat",
+      "action": "copy",
+      "status": "ok"
+    },
+    {
+      "serverId": "WaferMC-1.21.11",
+      "modId": "servers.dat_old",
+      "url": "https://api.wafermc.it/servers/WaferMC-1.21.11/files/servers.dat_old",
+      "relPath": "servers/WaferMC-1.21.11/files/servers.dat_old",
+      "artifactPath": "servers.dat_old",
+      "source": "C:\\Users\\Netsukii\\AppData\\Roaming\\.WaferMC-Launcher\\instances\\WaferMC-1.21.11\\servers.dat_old",
+      "outPath": "C:\\Users\\Netsukii\\Documents\\Visual Studio Code\\WaferMC\\WaferMC-Launcher\\server_upload_bundle_2026-03-08-21-35-05\\servers\\WaferMC-1.21.11\\files\\servers.dat_old",
+      "chain": "servers.dat_old",
+      "action": "copy",
+      "status": "ok"
+    }
+  ]
+}

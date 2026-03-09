@@ -18,6 +18,31 @@ export interface ServerMetaOptions {
     fabricVersion?: string
 }
 
+export function getDefaultUntrackedFiles(): UntrackedFilesOption[] {
+    return [{
+        appliesTo: ['files'],
+        patterns: [
+            'options.txt',
+            'optionsof.txt',
+            'optionsshaders.txt',
+            'servers.dat',
+            'servers.dat_old'
+        ]
+    }]
+}
+
+export function resolveUntrackedFiles(untrackedFiles?: UntrackedFilesOption[]): UntrackedFilesOption[] {
+    const merged = [
+        ...getDefaultUntrackedFiles(),
+        ...(untrackedFiles || [])
+    ]
+
+    return merged.map((entry) => ({
+        appliesTo: [...entry.appliesTo],
+        patterns: [...entry.patterns]
+    }))
+}
+
 export function getDefaultServerMeta(id: string, version: string, options?: ServerMetaOptions): ServerMeta {
 
     const servMeta: ServerMeta = {
@@ -51,8 +76,8 @@ export function getDefaultServerMeta(id: string, version: string, options?: Serv
         }
     }
 
-    // Add empty untracked files.
-    servMeta.untrackedFiles = []
+    // Keep mutable client files untracked by default.
+    servMeta.untrackedFiles = getDefaultUntrackedFiles()
 
     return servMeta
 }

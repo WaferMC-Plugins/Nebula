@@ -4,7 +4,7 @@ import { Server, Module } from 'helios-distribution-types'
 import { dirname, join, resolve as resolvePath } from 'path'
 import { URL } from 'url'
 import { VersionSegmentedRegistry } from '../../util/VersionSegmentedRegistry.js'
-import { ServerMeta, getDefaultServerMeta, ServerMetaOptions, UntrackedFilesOption } from '../../model/nebula/ServerMeta.js'
+import { ServerMeta, getDefaultServerMeta, ServerMetaOptions, UntrackedFilesOption, resolveUntrackedFiles } from '../../model/nebula/ServerMeta.js'
 import { BaseModelStructure } from './BaseModel.struct.js'
 import { FabricModStructure } from './module/FabricMod.struct.js'
 import { MiscFileStructure } from './module/File.struct.js'
@@ -143,7 +143,7 @@ export class ServerStructure extends BaseModelStructure<Server> {
                 // Read server meta
                 const serverMeta = JSON.parse(await readFile(resolvePath(absoluteServerRoot, this.SERVER_META_FILE), 'utf-8')) as ServerMeta
                 const minecraftVersion = new MinecraftVersion(match[2])
-                const untrackedFiles: UntrackedFilesOption[] = serverMeta.untrackedFiles || []
+                const untrackedFiles: UntrackedFilesOption[] = resolveUntrackedFiles(serverMeta.untrackedFiles)
 
                 let iconUrl: string = null!
 
